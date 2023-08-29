@@ -25,7 +25,6 @@ app.post("/api/upload", (req, res) => {
   });
 
   form.on("fileBegin", (upload, file) => {
-    console.log(file.originalFilename);
     const newPath = path.join(__dirname, "assets", file.originalFilename);
     console.log(newPath);
     file.filepath = newPath;
